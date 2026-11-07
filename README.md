@@ -12,11 +12,13 @@ This script directly interacts with your Python environment, updating packages w
 3. **Backup Your Environment:** Before executing the script, consider creating a backup of your Python environment or record the currently installed packages. In case of unexpected issues, you can revert to a known working state.
    
 ## Features
-- Installs or upgrades pip to ensure the latest version is used.
+- Installs pip if it's missing.
 - Lists outdated packages and updates them with the `only-if-needed` upgrade strategy.
-- Provides clear feedback on the packages that have been successfully updated.
+- Provides clear feedback on the packages that were updated and any that failed.
 
 ## Usage
-1. Run the script, and it checks for the existence of pip. If not installed, it installs or upgrades it.
+Run the script with the Python whose packages you want to update. For a virtual environment, use that environment's Python, e.g. `.venv\Scripts\python main.py` on Windows or `.venv/bin/python main.py` on macOS/Linux.
+
+1. Run the script, and it checks for the existence of pip. If not installed, it installs it.
 2. Lists outdated packages and updates them to their latest versions with the `only-if-needed` strategy.
 3. Prints the names of the packages that have been successfully updated.
